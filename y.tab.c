@@ -414,8 +414,8 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    10,    10,    13,    14,    16,    17,    18,    20,    21,
-      24,    28,    32,    33,    37,    38,    39,    42,    43
+       0,    11,    11,    14,    15,    17,    18,    19,    21,    22,
+      25,    29,    33,    34,    38,    39,    40,    43,    44
 };
 #endif
 
@@ -1332,7 +1332,7 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 10 "limbaj.y"
+#line 11 "limbaj.y"
     {printf("program corect sintactic\n");}
     break;
 
@@ -1552,7 +1552,7 @@ yyreturn:
 }
 
 
-#line 45 "limbaj.y"
+#line 46 "limbaj.y"
 
 int yyerror(char * s){
 printf("eroare: %s la linia:%d\n",s,yylineno);

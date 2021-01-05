@@ -7,6 +7,7 @@ extern int yylineno;
 %token ID TIP BGIN END ASSIGN NR 
 %start progr
 %%
+
 progr: declaratii bloc {printf("program corect sintactic\n");}
      ;
 
