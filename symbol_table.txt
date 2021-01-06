@@ -1,0 +1,8 @@
+In cl au fost declarate variabilele: p 
+In cl au fost declarate functiile: 
+
+In global au fost declarate variabilele: a c b h d 
+In global au fost declarate functiile: y 
+
+Functiile declarate sunt:
+[int] y ()

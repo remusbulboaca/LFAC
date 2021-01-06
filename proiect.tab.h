@@ -138,7 +138,7 @@ typedef union YYSTYPE
     char* str;
 }
 /* Line 1529 of yacc.c.  */
-#line 142 "y.tab.h"
+#line 142 "proiect.tab.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1

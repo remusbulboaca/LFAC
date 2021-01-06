@@ -198,7 +198,6 @@ void Adaugare(int a)
     expr[n++] = a;
 }
 
-
 void Print()
 {
     for (int i = 0; i < n; ++i)
@@ -220,7 +219,6 @@ void declare_without_init(char* type, char* name, _Bool is_const)
 {
     if (already_declared(name) != -1)
     {
-        
         char buffer[256];
         sprintf(buffer, "Variable %s is already declared", name);
         
@@ -303,12 +301,14 @@ int return_variable_value(char* name)
     {
         char buffer[256];
         sprintf(buffer, "Variable %s was not declared", name);
+        
         exit(0);
     }
     if (variables[position].value_present == 0)
     {
         char buffer[256];
         sprintf(buffer, "Variable %s does not have any value", name);
+        
         exit(0);
     }
     return variables[position].value;
@@ -475,7 +475,7 @@ typedef union YYSTYPE
     char* str;
 }
 /* Line 193 of yacc.c.  */
-#line 479 "y.tab.c"
+#line 479 "proiect.tab.c"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -488,7 +488,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 492 "y.tab.c"
+#line 492 "proiect.tab.c"
 
 #ifdef short
 # undef short
@@ -1876,202 +1876,202 @@ yyreduce:
     {
         case 2:
 #line 313 "proiect.y"
-    {printf("Program corect sintactic si semantic.\n"); Print();}
+    {printf("Program corect sintactic si semantic.\n"); Print();;}
     break;
 
   case 7:
 #line 323 "proiect.y"
-    {Enumerate("global");}
+    {Enumerate("global");;}
     break;
 
   case 10:
 #line 330 "proiect.y"
-    {Enumerate((yyvsp[(2) - (6)].str));}
+    {Enumerate((yyvsp[(2) - (6)].str));;}
     break;
 
   case 11:
 #line 331 "proiect.y"
-    {Enumerate((yyvsp[(2) - (5)].str));}
+    {Enumerate((yyvsp[(2) - (5)].str));;}
     break;
 
   case 14:
 #line 337 "proiect.y"
-    {declare_without_init((yyvsp[(2) - (4)].str), (yyvsp[(3) - (4)].str), 1);}
+    {declare_without_init((yyvsp[(2) - (4)].str), (yyvsp[(3) - (4)].str), 1);;}
     break;
 
   case 15:
 #line 338 "proiect.y"
-    {declare_without_init((yyvsp[(1) - (3)].str), (yyvsp[(2) - (3)].str), 0);}
+    {declare_without_init((yyvsp[(1) - (3)].str), (yyvsp[(2) - (3)].str), 0);;}
     break;
 
   case 16:
 #line 339 "proiect.y"
-    {declare_with_init_value((yyvsp[(2) - (6)].str), (yyvsp[(3) - (6)].str), (yyvsp[(5) - (6)].num), 1);}
+    {declare_with_init_value((yyvsp[(2) - (6)].str), (yyvsp[(3) - (6)].str), (yyvsp[(5) - (6)].num), 1);;}
     break;
 
   case 17:
 #line 340 "proiect.y"
-    {declare_with_init_value((yyvsp[(1) - (5)].str), (yyvsp[(2) - (5)].str), (yyvsp[(4) - (5)].num), 0);}
+    {declare_with_init_value((yyvsp[(1) - (5)].str), (yyvsp[(2) - (5)].str), (yyvsp[(4) - (5)].num), 0);;}
     break;
 
   case 18:
 #line 341 "proiect.y"
-    {declare_with_init_variable((yyvsp[(2) - (6)].str), (yyvsp[(3) - (6)].str), (yyvsp[(5) - (6)].str), 1);}
+    {declare_with_init_variable((yyvsp[(2) - (6)].str), (yyvsp[(3) - (6)].str), (yyvsp[(5) - (6)].str), 1);;}
     break;
 
   case 19:
 #line 342 "proiect.y"
-    {declare_with_init_variable((yyvsp[(1) - (5)].str), (yyvsp[(2) - (5)].str), (yyvsp[(4) - (5)].str), 0);}
+    {declare_with_init_variable((yyvsp[(1) - (5)].str), (yyvsp[(2) - (5)].str), (yyvsp[(4) - (5)].str), 0);;}
     break;
 
   case 21:
 #line 344 "proiect.y"
-    {declare_function((yyvsp[(1) - (3)].str), (yyvsp[(2) - (3)].str), (yyvsp[(3) - (3)].str));}
+    {declare_function((yyvsp[(1) - (3)].str), (yyvsp[(2) - (3)].str), (yyvsp[(3) - (3)].str));;}
     break;
 
   case 26:
 #line 352 "proiect.y"
-    {Enumerate("main");}
+    {Enumerate("main");;}
     break;
 
   case 27:
 #line 355 "proiect.y"
-    {(yyval.str) = malloc(256); (yyval.str)[0] = 0;}
+    {(yyval.str) = malloc(256); (yyval.str)[0] = 0;;}
     break;
 
   case 28:
 #line 356 "proiect.y"
-    {(yyval.str) = (yyvsp[(2) - (3)].str);}
+    {(yyval.str) = (yyvsp[(2) - (3)].str);;}
     break;
 
   case 29:
 #line 359 "proiect.y"
-    {(yyval.str) = (yyvsp[(1) - (2)].str); strcat((yyval.str), ", ");}
+    {(yyval.str) = (yyvsp[(1) - (2)].str); strcat((yyval.str), ", ");;}
     break;
 
   case 30:
 #line 360 "proiect.y"
-    {(yyval.str) = (yyvsp[(1) - (3)].str); strcat((yyval.str), (yyvsp[(3) - (3)].str));}
+    {(yyval.str) = (yyvsp[(1) - (3)].str); strcat((yyval.str), (yyvsp[(3) - (3)].str));;}
     break;
 
   case 62:
 #line 404 "proiect.y"
-    {assign_value((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num));}
+    {assign_value((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num));;}
     break;
 
   case 63:
 #line 405 "proiect.y"
-    {increment_decrement((yyvsp[(1) - (2)].str), (yyvsp[(2) - (2)].str));}
+    {increment_decrement((yyvsp[(1) - (2)].str), (yyvsp[(2) - (2)].str));;}
     break;
 
   case 64:
 #line 406 "proiect.y"
-    {increment_decrement((yyvsp[(1) - (2)].str), (yyvsp[(2) - (2)].str));}
+    {increment_decrement((yyvsp[(1) - (2)].str), (yyvsp[(2) - (2)].str));;}
     break;
 
   case 65:
 #line 407 "proiect.y"
-    {increment_decrement((yyvsp[(2) - (2)].str), (yyvsp[(1) - (2)].str));}
+    {increment_decrement((yyvsp[(2) - (2)].str), (yyvsp[(1) - (2)].str));;}
     break;
 
   case 66:
 #line 408 "proiect.y"
-    {increment_decrement((yyvsp[(2) - (2)].str), (yyvsp[(1) - (2)].str));}
+    {increment_decrement((yyvsp[(2) - (2)].str), (yyvsp[(1) - (2)].str));;}
     break;
 
   case 67:
 #line 409 "proiect.y"
-    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));}
+    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));;}
     break;
 
   case 68:
 #line 410 "proiect.y"
-    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));}
+    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));;}
     break;
 
   case 69:
 #line 411 "proiect.y"
-    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));}
+    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));;}
     break;
 
   case 70:
 #line 412 "proiect.y"
-    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));}
+    {assign_number_with_operator((yyvsp[(1) - (3)].str), (yyvsp[(3) - (3)].num), (yyvsp[(2) - (3)].str));;}
     break;
 
   case 72:
 #line 414 "proiect.y"
-    {Adaugare((yyvsp[(3) - (4)].num));}
+    {Adaugare((yyvsp[(3) - (4)].num));;}
     break;
 
   case 75:
 #line 419 "proiect.y"
-    {(yyval.num) = (yyvsp[(1) - (3)].num) + (yyvsp[(3) - (3)].num);}
+    {(yyval.num) = (yyvsp[(1) - (3)].num) + (yyvsp[(3) - (3)].num);;}
     break;
 
   case 76:
 #line 420 "proiect.y"
-    {(yyval.num) = (yyvsp[(1) - (3)].num) - (yyvsp[(3) - (3)].num);}
+    {(yyval.num) = (yyvsp[(1) - (3)].num) - (yyvsp[(3) - (3)].num);;}
     break;
 
   case 77:
 #line 421 "proiect.y"
-    {(yyval.num) = (yyvsp[(1) - (3)].num) * (yyvsp[(3) - (3)].num);}
+    {(yyval.num) = (yyvsp[(1) - (3)].num) * (yyvsp[(3) - (3)].num);;}
     break;
 
   case 78:
 #line 422 "proiect.y"
-    {(yyval.num) = (yyvsp[(1) - (3)].num) / (yyvsp[(3) - (3)].num);}
+    {(yyval.num) = (yyvsp[(1) - (3)].num) / (yyvsp[(3) - (3)].num);;}
     break;
 
   case 79:
 #line 423 "proiect.y"
-    {(yyval.num) = (yyvsp[(2) - (3)].num);}
+    {(yyval.num) = (yyvsp[(2) - (3)].num);;}
     break;
 
   case 80:
 #line 424 "proiect.y"
-    {(yyval.num) = (yyvsp[(1) - (1)].num);}
+    {(yyval.num) = (yyvsp[(1) - (1)].num);;}
     break;
 
   case 81:
 #line 425 "proiect.y"
-    {(yyval.num) = 0;}
+    {(yyval.num) = 0;;}
     break;
 
   case 82:
 #line 426 "proiect.y"
-    {(yyval.num) = 0;}
+    {(yyval.num) = 0;;}
     break;
 
   case 83:
 #line 427 "proiect.y"
-    {(yyval.num) = return_variable_value((yyvsp[(1) - (1)].str));}
+    {(yyval.num) = return_variable_value((yyvsp[(1) - (1)].str));;}
     break;
 
   case 84:
 #line 430 "proiect.y"
-    {(yyval.str) = get_return_type ((yyvsp[(1) - (4)].str), (yyvsp[(3) - (4)].str));}
+    {(yyval.str) = get_return_type ((yyvsp[(1) - (4)].str), (yyvsp[(3) - (4)].str));;}
     break;
 
   case 85:
 #line 433 "proiect.y"
-    {(yyval.str) = malloc (256); strcpy((yyval.str), "int, ");}
+    {(yyval.str) = malloc (256); strcpy((yyval.str), "int, ");;}
     break;
 
   case 86:
 #line 434 "proiect.y"
-    {(yyval.str) = (yyvsp[(1) - (1)].str); strcat((yyval.str), ", ");}
+    {(yyval.str) = (yyvsp[(1) - (1)].str); strcat((yyval.str), ", ");;}
     break;
 
   case 87:
 #line 435 "proiect.y"
-    {(yyval.str) = (yyvsp[(1) - (3)].str); strcat((yyval.str), (yyvsp[(3) - (3)].str));}
+    {(yyval.str) = (yyvsp[(1) - (3)].str); strcat((yyval.str), (yyvsp[(3) - (3)].str));;}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 2075 "y.tab.c"
+#line 2075 "proiect.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);

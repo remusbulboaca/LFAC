@@ -1,0 +1,31 @@
+class cl { int p; };
+
+int a = 7;
+int c = a;
+int b = c;
+char h ;
+string j;
+float d;
+int v[20];
+
+int y ( )
+
+float main()
+{
+    
+    int z ( )
+    int l = a;
+    a = 5/8;
+    b += a;
+    b++;
+    b--;
+    b += ((a*5 + 2) * 1) - 9;
+    Print(b);
+    if (a) ;
+    if(a < 5) a++; ;
+    Print(a);
+    if(a < 5) { a++; b--; } else b--;
+    while (a<5){
+        a--;
+    }
+}
